@@ -66,16 +66,11 @@ jobs:
 
     # Run the migrations
     - name: Run 'Liquibase status' in a Docker Container	    
-      uses: liquibase
-      with:
-        args:  status --verbose
+      run: liquibase  status --verbose
     
     - name: Run 'Liquibase update' in a Docker Container
-      uses: liquibase
-      with:
-        args: --logLevel=debug update
+      run: liquibase --logLevel=debug update
         
-
 
     # Display All Databases and Users Table Schema (again) to confirm the migration
     - name: Display All Databases and Users Table Schema
