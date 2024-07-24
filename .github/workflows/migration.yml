@@ -49,7 +49,9 @@ jobs:
         done
 
     # Run the migrations
-    
+    - name: Run liquibase
+      run: |
+        liquibase update
 
 
     # Display All Databases and Users Table Schema (again) to confirm the migration
