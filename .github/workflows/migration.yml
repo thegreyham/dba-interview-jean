@@ -30,6 +30,7 @@ jobs:
         wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-j-9.0.0.tar.gz
         tar -xvzf mysql-connector-j-9.0.0.tar.gz
         mv mysql-connector-j-9.0.0/mysql-connector-j-9.0.0.jar /usr/local/bin/
+        echo $PATH
         
     - name: Wait for MySQL to be ready
       run: |
