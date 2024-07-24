@@ -64,6 +64,7 @@ jobs:
     # Run the migrations
     - name: Run 'Liquibase status' 
       run: |
+        pwd
         docker run --rm -v ../../flyway/sql:/flyway/sql -v ../../flyaway/conf:/flyway/conf  flyway/flyway migrate
         
 
