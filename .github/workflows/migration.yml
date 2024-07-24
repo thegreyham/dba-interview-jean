@@ -66,10 +66,12 @@ jobs:
         done
 
     # Run the migrations
-    - name: Run 'Liquibase status' in a Docker Container	    
+    - name: Run 'Liquibase status' 
+      working-directory: ../liquibase
       run: liquibase  status --verbose
     
-    - name: Run 'Liquibase update' in a Docker Container
+    - name: Run 'Liquibase update' 
+      working-directory: ../liquibase
       run: liquibase --logLevel=debug update
         
 
