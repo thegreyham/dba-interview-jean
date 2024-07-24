@@ -67,11 +67,11 @@ jobs:
 
     # Run the migrations
     - name: Run 'Liquibase status' 
-      working-directory: ../liquibase
+      working-directory: liquibase
       run: liquibase  status --verbose
     
     - name: Run 'Liquibase update' 
-      working-directory: ../liquibase
+      working-directory: liquibase
       run: liquibase --logLevel=debug update
         
 
