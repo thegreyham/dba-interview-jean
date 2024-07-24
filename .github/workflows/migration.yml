@@ -25,7 +25,12 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
+    - name: install jar for mysql connector
+      run: |
+        wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-j-9.0.0.tar.gz
+        tar -xvzf mysql-connector-j-9.0.0.tar.gz
+        mv mysql-connector-j-9.0.0/mysql-connector-j-9.0.0.jar /usr/local/bin/
+        
     - name: Wait for MySQL to be ready
       run: |
         for i in {30..0}; do
