@@ -31,3 +31,9 @@ ALTER TABLE schema9.users ADD COLUMN age INT;
 --changeset jc:10 labels:assignment-test 
 ALTER TABLE schema10.users ADD COLUMN age INT; 
 --rollback ALTER TABLE schema10.users DROP COLUMN age;
+
+--changeset jc:11 labels:assignment-test 
+ALTER TABLE schema10.users ADD COLUMN department VARCHAR (255); 
+--rollback ALTER TABLE schema10.users DROP COLUMN department;
+
+
