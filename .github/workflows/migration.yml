@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     env: 
       LIQUIBASE_DRIVER_PROPERTIES_FILE: ../liquibase/liquibase.properties
-      LIQUIBASE_CHANGELOG_FILE: ../liquibase/alter.sql
+      LIQUIBASE_COMMAND_CHANGELOG_FILE: ../liquibase/alter.sql
     services:
         mysql:
           image: mysql:8.0
