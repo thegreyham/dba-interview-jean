@@ -64,7 +64,7 @@ jobs:
     # Run the migrations
     - name: Run 'Liquibase status' 
       run: |
-        docker run --rm -v /home/runner/work/dba-interview-jean/dba-interview-jean/flyway/sql:/flyway/sql -v /home/runner/work/dba-interview-jean/dba-interview-jean/flyaway/conf:/flyway/conf  flyway/flyway migrate
+        docker run --rm -v ./flyway/sql:/flyway/sql -v ./flyaway/conf:/flyway/conf  flyway/flyway migrate
         
 
     # Display All Databases and Users Table Schema (again) to confirm the migration
