@@ -49,9 +49,16 @@ jobs:
         done
 
     # Run the migrations
-    - name: Run liquibase
-      run: |
-        liquibase update
+    - name: Run 'Liquibase status' in a Docker Container	    
+      uses: docker://liquibase/liquibase:latest
+      with:
+        args: --url="jdbc:mysql://localhost:3306/sys" --changeLogFile=./liquibase/alter.sql --username=root --password=rootpassword status --verbose
+    
+    - name: Run 'Liquibase update' in a Docker Container
+      uses: docker://liquibase/liquibase:latest
+      with:
+        args: --url="jdbc:mysql://localhost:3306/sys" --changeLogFile=./liquibase/alter.sql --username=root --password=rootpassword --logLevel=debug update
+        
 
 
     # Display All Databases and Users Table Schema (again) to confirm the migration
