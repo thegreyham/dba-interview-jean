@@ -7,6 +7,7 @@ on:
       - 'jc'
     paths:
       - 'flyway/sql/*'
+      - 'github//workflows/migration-flyway.yml'
 
 
 jobs:
