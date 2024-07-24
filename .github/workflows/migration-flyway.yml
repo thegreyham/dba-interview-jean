@@ -63,11 +63,11 @@ jobs:
     - name: Run 'flyway migrate'
       uses: addnab/docker-run-action@v3
       with: 
-          image: flyway/flyway
-          options: -v "${{ github.workspace }}/flyway/sql":"/flyway/sql" -v "${{ github.workspace }}/flyway/conf":"/flyway/conf"
+          image: flyway/flyway:latest
+          options: -v ${{ github.workspace }}/flyway/sql:/flyway/sql -v ${{ github.workspace }}/flyway/conf:/flyway/conf
           run: |
             echo "Running migration"
-            migrate
+            flyway migrate
         
 
     # Display All Databases and Users Table Schema (again) to confirm the migration
