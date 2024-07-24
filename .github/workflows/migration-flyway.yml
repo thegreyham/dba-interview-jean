@@ -62,9 +62,12 @@ jobs:
         done
 
     # Run the migrations
-    - name: Run 'Liquibase status' 
-      run: |
-        docker run --rm -v ./flyway/sql:/flyway/sql -v ./flyaway/conf:/flyway/conf  flyway/flyway migrate
+    - name: Run 'Liquibase status'
+      uses: addnab/docker-run-action@v3
+      with: 
+          image: flyway/flyway
+          options: -v ./flyway/sql:/flyway/sql -v ./flyaway/conf:/flyway/conf
+          run: migrate
         
 
     # Display All Databases and Users Table Schema (again) to confirm the migration
