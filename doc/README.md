@@ -18,3 +18,7 @@
 
 Liquibase is more flexible. We don't need to use a format naming for the changelog files like in flyway. (ex V1___ ) 
 It is easier to use and it give support for rollback
+
+# how CI/CD workw
+The migration.yml actions will be lunch once there is a push event on any file in liquibase/db/changelog/packages/* or .github/workflows/migration.yml
+In the steps you will see that liquibase will be installed before being used. One impovements can be to use docker like in flyway
