@@ -6,7 +6,7 @@ on:
       - 'main'
       - 'jc'
     paths:
-      - 'liquibase/*'
+      - 'liquibase/db/changelog/packages/*'
       - '.github/workflows/migration.yml'
 
 
