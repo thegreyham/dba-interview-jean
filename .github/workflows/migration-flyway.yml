@@ -5,7 +5,9 @@ on:
     branches: 
       - 'main'
       - 'jc'
-
+    paths:
+      - 'flyway/sql/*'
+      - '.github/workflows/migration-flyway.yml'
 
 jobs:
   migrate:
