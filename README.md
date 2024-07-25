@@ -31,9 +31,9 @@ ALTER TABLE users ADD COLUMN age INT;
 ```
 
 6. Document the Migration:
-
+[
 [doc/README.md
-](https://github.com/thegreyham/dba-interview-jean/edit/jc/README.md)
+](https://github.com/thegreyham/dba-interview-jean/edit/jc/README.md)](https://github.com/thegreyham/dba-interview-jean/blob/jc/doc/README.md)
 
 # Expected Deliverables
 
