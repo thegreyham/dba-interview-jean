@@ -31,10 +31,9 @@ ALTER TABLE users ADD COLUMN age INT;
 ```
 
 6. Document the Migration:
-
-Provide a brief documentation explaining the migration process, including any challenges encountered and how they were overcome.
-
-
+[
+[doc/README.md
+](https://github.com/thegreyham/dba-interview-jean/edit/jc/README.md)](https://github.com/thegreyham/dba-interview-jean/blob/jc/doc/README.md)
 
 # Expected Deliverables
 
